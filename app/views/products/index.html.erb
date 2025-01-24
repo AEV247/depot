@@ -5,11 +5,9 @@
       <%= notice %>
     </p>
   <% end %>
-
   <div class="flex justify-between items-center pb-8">
     <h1 class="mx-auto text-4xl font-bold ">Products</h1>
   </div>
-
   <table id="products" class="mx-auto">
     <tfoot>
       <tr>
@@ -23,15 +21,12 @@
         </td>
       </tr>
     </tfoot>
-
     <tbody>
       <% @products.each do |product| %>
         <tr class="<%= cycle('bg-green-200', 'bg-white') %>">
-
           <td class="px-2 py-3">
             <%= image_tag(product.image_url, class: 'w-40') %>
           </td>
-
           <td>
             <h1 class="text-xl font-bold mb-3"><%= product.title %></h1>
             <p>
@@ -39,7 +34,6 @@
                            length: 80) %>
             </p>
           </td>
-
           <td class="px-3">
             <ul>
               <li>
@@ -47,13 +41,11 @@
                              product,
                              class: 'hover:underline' %>
               </li>
-
               <li>
                 <%= link_to 'Edit',
                              edit_product_path(product),
                              class: 'hover:underline' %>
               </li>
-
               <li>
                 <%= link_to 'Destroy',
                              product,
